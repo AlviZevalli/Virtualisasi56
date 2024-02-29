@@ -1,3 +1,62 @@
 {
-"cek vbox": "ada"
+"cek vbox": "ada",
+"Pembuatan VM1" : {
+		    "CekVM"    : "TidakAda",
+		    "buatVM"   : "klikNew",
+		    "NamaVM"   : "LinuxVM",
+		    "Folder"   : "C:\Users\HP\VirtualBox VMs",
+		    "ISOImage" : "ubuntu-22.04.4-live-server-amd64",
+		  },
+
+"Instalasi VM1" : {
+		    "PilihBahasa"      : "English",
+		    "BaseInstallation" : "UbuntuServer",
+		    "ConfigureNetwork" : "Done",
+		    "ConfigureStorage" : "Done",
+		    "ProfileSetup"     : {
+					    "Name"       : "CalvinALvianto",
+					    "ServerName" : "alvizevalli",
+				            "Username"   : "alvi",
+					    "Password"   : "Calvin28",	
+									},
+		    "Installation"     : "Complete",
+		   },
+
+"Pembuatan VM2" : {
+		    "Clone" 	: "LinuxVM",
+		    "Folder"    : "C:\Users\HP\VirtualBox VMs",
+		    "CloneType" : "FullClone",
+		   },
+
+"UbahHostName"  : {
+		   "ubahHostname" : "sudo nano /etc/hostname"
+		   "ubahHost"	  : "sudo nano/etc/hosts"
+		   "reboot"  	  : "sudo reboot"
+		  },
+
+"koneksiSSH"    : {
+		  "openssh-server" : "install openssh-server dengan apt-get install openssh-server",
+		  "editConfig" 	   : "edit config SSH pada bagian PasswordAuthentication menjadi yes",
+		  "restartSSH"     : "restart SSH dengan /etc/init.d/ssh restart",
+		  "verifySSH" 	   : "lakukan verifikasi ssh dengan cara ssh alvi@127.0.0.1"
+		  "portForwarding" : {
+				     "name"      : "UbuntuServer"
+				     "protocol"  : "TCP"
+				     "hostIP"    : "127.0.0.1"
+				     "hostPort"  : "8022"
+			             "guestIP"   : "10.0.2.15"
+				     "guestPort" : "22"
+					},
+		  "koneksi antara gitBash dengan VM1" : "bisa",
+		  "koneksi antara clone dengan VM1"   : "bisa",
+		  "koneksi antara VM1 dengan clone"   : "bisa",
+		  },
 }
+
+
+
+
+
+
+
+
