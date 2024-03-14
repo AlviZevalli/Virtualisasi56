@@ -4,7 +4,7 @@
 		    "CekVM"    : "TidakAda",
 		    "buatVM"   : "klikNew",
 		    "NamaVM"   : "LinuxVM",
-		    "Folder"   : "C:\Users\HP\VirtualBox VMs",
+		    "Folder"   : "C:/Users/HP/VirtualBox VMs",
 		    "ISOImage" : "ubuntu-22.04.4-live-server-amd64",
 		  },
 
@@ -24,7 +24,7 @@
 
 "Pembuatan VM2" : {
 		    "Clone" 	: "LinuxVM",
-		    "Folder"    : "C:\Users\HP\VirtualBox VMs",
+		    "Folder"    : "C:/Users/HP/VirtualBox VMs",
 		    "CloneType" : "FullClone",
 		   },
 
