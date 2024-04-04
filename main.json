@@ -51,12 +51,38 @@
 		  "koneksi antara clone dengan VM1"   : "bisa",
 		  "koneksi antara VM1 dengan clone"   : "bisa",
 		  },
+
+"MenginstallApachePadaVM1" :{
+		"MemintaIP" 	  : "kita bisa meminta IP pada DHCP terlebih dahulu dengan 'sudo dhclient enp0s3 -v'. ",
+		"cekUpdate" 	  : "lakukan pengecekan update dengan 'sudo apt-get update'",
+		"InstalasiApache" : {
+				      "Step1" : "mulai instalasi dengan perintah sudo 'apt-get install apache2' ",
+				      "Step2" : "Lakukan pengecekan kesalahan konfigurasi pada Apache HTTP Server dengan 'sudo apache2ctl configtest'",
+				      "Step3" : "tambahakan nama server (bisa menggunakan IP server) dengan cara 'sudo nano /etc/apache2/apache2.conf'",
+				      "Step4" : "Lakukan tes kesalahan lagi dengan perintah pada step 2",
+				      "Step5" : "restart Apache dengan tujuan untuk menerapkan perubahan dengan perintah 'sudo systemctl restart apache2'",
+				      "Step6" : "lakukan penyesuaian terhadap firewall dengan melihat daftar list dalam konfigurasi yang ada dengan 'sudo ufw app list' ",
+				      "Step7" : "jika terlihat hasil output 'Apache Full', maka port 80 dan 443 bisa digunakan dengan baik",
+				      "Step8" : "berikan izin akses pada 'Apache Full' pada ufw dengan 'sudo ufw allow in "Apache Full" ' ",
+				      "Step9" : "Lakukan pengecekan apakah Apache telah terinstall dengan baik dengan cara 'curl (ipServer)' dalam kasus ini curl 10.0.56.6",
+				      "Step10" : "Jika berhasil maka akan memunculkan output dalam bentuk HTML",
+					}
+				},
+
+"MenginstallMySQLPadaVM2" :{
+		"MemintaIP" 	  : "kita bisa meminta IP pada DHCP terlebih dahulu dengan 'sudo dhclient enp0s3 -v'. ",
+		"cekUpdate" 	  : "lakukan pengecekan update dengan 'sudo apt-get update'",
+		"InstalasiMySql" : {
+				    "Step1" : "Mulailah dengan menjalankan vm dan lakukan login menggunakan akun pengguna yang sudah tersedia."
+				    "Step2" : "Kemudian, ketik perintah 'sudo apt update' dan masukkan kata sandi untuk akun pengguna yang sedang digunakan."
+			            "Step3" : "Setelah itu, lakukan instalasi mysql-server dengan perintah 'sudo apt install mysql-server'."
+				    "Step4" : "Setelah proses instalasi selesai, periksa apakah layanan MySQL sudah aktif atau belum dengan perintah 'sudo systemctl status mysql.service'."
+				    "Step5" : "Jika MySQL sudah aktif, langkah selanjutnya adalah melakukan konfigurasi keamanan."
+			            "Step6" : "Gunakan perintah 'sudo mysql_secure_installation'. Di sini, akan muncul beberapa pilihan terkait validasi. Saya memilih untuk tidak menggunakannya."
+				    "Step7" : "Kemudian, masukkan kata sandi baru dan jawablah beberapa pertanyaan yang diberikan."
+				    "Step8" : "Atur opsi-opsi berikut: 'remove anonymous user=no', 'disallow root login=no', 'remove test database=no', 'reload previlage table=yes'."
+				    "Step9" : "Terakhir, masuk sebagai pengguna root dengan perintah 'sudo mysql -u root -p'."
+					}
+				},
 }
-
-
-
-
-
-
-
 
